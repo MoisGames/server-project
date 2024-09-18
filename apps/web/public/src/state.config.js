@@ -13,6 +13,11 @@ export default function stateConfig($stateProvider, $urlRouterProvider) {
         component: 'serversView',
       })
       .state({
+        name: 'servers.viewGroup',
+        url: '/view/:groupId',
+        component: 'serversViewGroup',
+      })
+      .state({
         name: 'servers.edit',
         url: '/edit/:id',
         component: 'serversEdit',

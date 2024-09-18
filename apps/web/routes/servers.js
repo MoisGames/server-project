@@ -17,11 +17,22 @@ serversRouter.get('/', async (req, res) => {
 });
 
 
-serversRouter.get('/:id', async (req, res) => {
+serversRouter.get('/:id', async (req, res) => { //Найти определенный сервер для выбора
   try {
     console.log('get servers id ', req.params.id);
     res.json(await Server.findOne({
       _id: req.params.id,
+    }));
+  } catch (err) {
+    console.log(err);
+    res.json({});
+  }
+});
+serversRouter.get('/:groupId', async (req, res) => { //Найти опред. группу серверов
+  try {
+    console.log('get servers groupId ', req.params.groupId);
+    res.json(await Server.find({
+      _groupId: req.params.groupId,
     }));
   } catch (err) {
     console.log(err);
