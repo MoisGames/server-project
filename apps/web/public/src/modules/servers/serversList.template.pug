@@ -3,14 +3,14 @@
     .panel.panel-default
       .panel-heading
         h3 Сервера
-          a.label.label-primary.pull-right(
-            ui-sref="servers.create",
-            ui-sref-active="active"
-          ) +
-          a.label.label-primary.pull-right(
-            ng-click="$ctrl.addTasks()",
-            style="margin-right: 10px"
-          ) *
+          .panel-body
+            a.label.label-primary.pull-right(
+              ui-sref="servers.create",
+              ui-sref-active="active"
+            ) Добавить сервер
+            a.label.label-primary.pull-right(
+              ng-click="$ctrl.addTasks()",
+            ) Добавить задачи
       .panel-body
         .list-group
           button.list-group-item(
@@ -21,3 +21,23 @@
             span {{ server.name }}
   .col-md-9
     ui-view
+.row
+  .col-md-3
+    .panel.panel-default
+      .panel-heading
+        h3 Группы серверов
+          .panel-body
+            a.label.label-primary.pull-right(
+              ui-sref="servers.create",
+              ui-sref-active="active"
+            ) Добавить группу
+      .panel-body
+        .list-group
+          button.list-group-item(
+            ng-repeat="server in $ctrl.servers",
+            ui-sref-active="active",
+            ui-sref="servers.view({groupId:server._groupId})"
+          )
+            span {{ server.groupId }} Группа
+  .col-md-9
+    ui-view      

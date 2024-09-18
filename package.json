@@ -8,7 +8,8 @@
     "lint-pug-templates": "npx prettier --write '**/*.pug' --plugin='@prettier/plugin-pug'",
     "lint-fix": "eslint --fix . && npm run lint-pug-templates",
     "build": "npm run build:web:client",
-    "build:web:client": "webpack --config ./apps/web/public/webpack.config.js"
+    "build:web:client": "webpack --config ./apps/web/public/webpack.config.js",
+    "start": "webpack serve"
   },
   "repository": {
     "type": "git",
@@ -34,7 +35,8 @@
     "moment": "^2.29.4",
     "mongoose": "^8.3.0",
     "pug": "^3.0.2",
-    "serve-favicon": "^2.5.0"
+    "serve-favicon": "^2.5.0",
+    "webpack-dev-server": "^5.1.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.24.1",
