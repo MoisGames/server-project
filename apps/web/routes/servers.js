@@ -123,7 +123,7 @@ serversRouter.get('/:id/reload', async (req, res) => {
       user: 'Тестовый пользователь',
       action: 'Пользователь перезапустил сервер',
     });
-    server.status = 'started';
+    server.status = 'started'; 
     await server.save();
     res.json(server);
   } catch (err) {
