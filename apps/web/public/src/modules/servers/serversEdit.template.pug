@@ -1,11 +1,11 @@
-h4 Сервер {{ $ctrl.server.name }} ({{ $ctrl.server.host }})
+h4 Ваш сервер {{ $ctrl.server.name }} ({{ $ctrl.server.host }})
 form.form.form-horizontal(name="editServerForm")
   .form-group(ng-class="{ 'has-error':editServerForm.name.$invalid }")
     label.control-label.col-md-4 Название
     .col-md-6
       input.form-control(name="name", ng-model="$ctrl.server.name", required)
   .form-group(ng-class="{ 'has-error':editServerForm.host.$invalid }")
-    label.control-label.col-md-4 Host
+    label.control-label.col-md-4 Хост
     .col-md-6
       input.form-control(name="host", ng-model="$ctrl.server.host", required)
   .form-group(ng-class="{ 'has-error':editServerForm.username.$invalid }")

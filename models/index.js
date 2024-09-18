@@ -15,6 +15,6 @@ const Task = settingsConnection.model('tasks', taskSchema);
 
 module.exports = {
   Server,
-  UserAction,
+  UserAction, 
   Task,
 };

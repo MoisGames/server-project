@@ -22,6 +22,10 @@
           a.btn.btn-default.pull-right(
             ng-if="$ctrl.server.status === 'started'",
             ng-click="$ctrl.stop()"
+          ) Перезапустить
+          a.btn.btn-default.pull-right(
+            ng-if="$ctrl.server.status === 'started'",
+            ng-click="$ctrl.stop()"
           ) Остановить
           a.btn.btn-default.pull-right(
             ng-if="$ctrl.server.status === 'stoped'",
