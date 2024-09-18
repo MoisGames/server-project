@@ -23,6 +23,11 @@ export default function stateConfig($stateProvider, $urlRouterProvider) {
         component: 'serversEdit',
       })
       .state({
+        name: 'servers.createGroup',
+        url: '/createGroup',
+        component: 'serversEditGroup',
+      })
+      .state({
         name: 'journals',
         url: '/journals',
         component: 'journalsMain',
