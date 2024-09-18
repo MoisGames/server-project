@@ -34,6 +34,13 @@ const serversView = {
           });
         }
       };
+      this.reload = function() {
+        if (confirm('Вы хотите перезапустить сервер?')) {
+          this.server.$reload(function() {
+            NotificationService.showSuccess('Сервер перезагружен');
+          });
+        }
+      };
     }],
 };
 

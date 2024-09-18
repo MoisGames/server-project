@@ -21,7 +21,7 @@
         td {{ $ctrl.server.status === "started" ? "Запущен" : "Остановлен" }}
           a.btn.btn-default.pull-right(
             ng-if="$ctrl.server.status === 'started'",
-            ng-click="$ctrl.stop()"
+            ng-click="$ctrl.reload()"
           ) Перезапустить
           a.btn.btn-default.pull-right(
             ng-if="$ctrl.server.status === 'started'",
