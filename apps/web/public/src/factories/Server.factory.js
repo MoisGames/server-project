@@ -12,6 +12,11 @@ const Server = [
         method: 'get',
         isArray: false,
       },
+      reload: {
+        url: '/servers/:id/reload',
+        method: 'get',
+        isArray: false,
+      }
     });
   },
 ];
